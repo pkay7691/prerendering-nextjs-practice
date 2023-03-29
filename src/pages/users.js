@@ -1,13 +1,15 @@
-export default function Users({ users }) {
+import User from "../components/User";
+
+
+
+export default function UserList({ users }) {
   return (
     <>
       <h1>List of Users</h1>
-      {users.map((users) => {
+      {users.map((user) => {
         return (
-          <div key={users.id}>
-            <h3>{users.name}</h3>
-            <p>{users.email}</p>
-            <p>{users.website}</p>
+          <div key={user.id}>
+            <User user={user}/>
           </div>
         );
       })}
